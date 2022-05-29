@@ -183,14 +183,24 @@ df1 = pd.DataFrame({
 # print(sorted_data_2)
 
 # Brakujące wartości
-df1 = pd.DataFrame({
-    "Name": ["Ania", np.NaN, np.NaN, "Tomek"],
-    "Score": [30, 49, np.NaN, np.NaN],
+# df1 = pd.DataFrame({
+#     "Name": ["Ania", np.NaN, np.NaN, "Tomek"],
+#     "Score": [30, 49, np.NaN, np.NaN],
+#
+# })
+# print('Is NaN in Score: ', any(df1['Score'].isna()))
+# print('Is NaN in Name', any(df1['Name'].isna()))
+# removed_nan = df1.dropna(thresh=1)  # tolerancja brakujacych wartosci
+# print(removed_nan)
 
-})
-print('Is NaN in Score: ', any(df1['Score'].isna()))
-print('Is NaN in Name', any(df1['Name'].isna()))
-removed_nan = df1.dropna(thresh=1)  # tolerancja brakujacych wartosci
-print(removed_nan)
 
 # funckja apply
+# def func(x):
+#     return x + 2
+
+# func_lambda = lambda x: x + 2
+
+max_score = df1['Score'].max()
+df1['Score %'] = df1['Score'].apply(lambda x: (x / max_score) * 100)
+
+print(df1)
