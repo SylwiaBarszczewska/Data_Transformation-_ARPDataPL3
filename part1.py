@@ -16,8 +16,8 @@ data1 = {
 }
 
 numpy_data = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
-
-df = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc'], columns=['New_col1', 'New_col2', 'New_col3'])
+columns=['New_col1', 'New_col2', 'New_col3']
+df = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc'])
 print(df)
 
 
