@@ -170,14 +170,17 @@ df1 = pd.DataFrame({
 })
 
 # print(df1.groupby('City').mean())
-print(df1.groupby(['City', 'Name']).agg(
-    {
-        "Score": ['mean', 'max'],
-        "score 2": 'mean'
-    }
-))
+# print(df1.groupby(['City', 'Name']).agg(
+#     {
+#         "Score": ['mean', 'max'],
+#         "score 2": 'mean'
+#     }
+# ))
 
 # Sortowanie
+sorted_data = df1.sort_values(by='Name')
+sorted_data_2 = df1.sort_values(by='Score', ascending=False)
+print(sorted_data_2)
 
 # Brakujące wartości
 
