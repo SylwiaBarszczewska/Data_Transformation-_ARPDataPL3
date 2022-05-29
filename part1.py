@@ -35,13 +35,20 @@ df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 # print(first_col_df)
 # print(type(first_col_df))
 
-# operacje matematyczne
-print(f'Min value: {df1["col1"].min()}, Max value: {df1["col1"].max()}, Mean value: {df1["col1"].mean()}')
-print(df1[df1['col1'] == df1["col1"].max()])
+# operacje matematyczne - funkcje agregacyjne
+# print(f'Min value: {df1["col1"].min()}, Max value: {df1["col1"].max()}, Mean value: {df1["col1"].mean()}')
+# print(df1[df1['col1'] == df1["col1"].max()])
 
 # Dodawanie kolumn
+print(df1.shape)
+df1['new_col_constant'] = 1
+df1['new_col_values'] = [3, 4, 5, 6, 7, 8]
+df1['new_col_sum'] = df1['col1'] + 1
+print(df1.shape)
+print(df1)
 
 # Usuwanie kolumn
+
 
 # Filtrowanie danych
 
