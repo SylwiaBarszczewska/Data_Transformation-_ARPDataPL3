@@ -79,14 +79,47 @@ df_1 = pd.DataFrame(
         "B": [1.1, 2.2, 3.3]
     }
 )
-
-
 df_2 = pd.DataFrame(
     {
         "A": [4, 5, 6],
         "B": [4.1, 5.2, 6.3]
     }
 )
+print(df_1 + df_2)
+
+df_1 = pd.DataFrame(
+    {
+        "A": [1, 2, 3, 4],
+        "B": [1.1, 2.2, 3.3, 4.4]
+    }
+)
+df_2 = pd.DataFrame(
+    {
+        "A": [4, 5, 6],
+        "B": [4.1, 5.2, 6.3]
+    }
+)
+print(df_1 + df_2)
+
+df_1 = pd.DataFrame(
+    {
+        "A": [1, 2, 3, 4],
+        "B": [1.1, 2.2, 3.3, 4.4]
+    }
+)
+df_2 = pd.DataFrame(
+    {
+        "A": [4, 5, 6],
+        "C": [4.1, 5.2, 6.3]
+    }
+)
+df_1['C'] = 0
+df_2['B'] = 0
+
+print(df_1)
+print(df_1 - df_2)
+
+print(df_1 + 5) # skalarna wartosc
 
 # Łączenie DataFrames
 
