@@ -18,7 +18,7 @@ data1 = {
 # numpy_data = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
 df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 # df2 = pd.DataFrame(data=numpy_data, index=['Aa', 'Bb', 'Cc'], columns=['col1', 'col2', 'col3'])
-print(df1)
+# print(df1)
 
 # Wyswietlanie danych
 # print(df1.shape)  # zwraca wymiar tabeli
@@ -27,7 +27,13 @@ print(df1)
 
 sample_data_iloc = df1.iloc[0]
 sample_data_loc = df1.loc['Aa']
-print(sample_data_loc)
+sample_data_iloc_first3 = df1.iloc[:3, :-1]
+sample_data_loc_one_col = df1.loc['Aa', ['col1', 'col2']]
+
+first_col_series = df1['col1']
+first_col_df = df1[['col1', 'col2']]
+print(first_col_df)
+# print(type(first_col_df))
 
 # operacje matematyczne
 
