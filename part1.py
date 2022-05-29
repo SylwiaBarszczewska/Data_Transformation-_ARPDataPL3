@@ -178,10 +178,19 @@ df1 = pd.DataFrame({
 # ))
 
 # Sortowanie
-sorted_data = df1.sort_values(by='Name')
-sorted_data_2 = df1.sort_values(by='Score', ascending=False)
-print(sorted_data_2)
+# sorted_data = df1.sort_values(by='Name') # domyslnie sortowanie od najmniejszej do najwiekszej
+# sorted_data_2 = df1.sort_values(by='Score', ascending=False)  # sortowanie od najwiekszej do najmniejszej
+# print(sorted_data_2)
 
 # Brakujące wartości
+df1 = pd.DataFrame({
+    "Name": ["Ania", np.NaN, np.NaN, "Tomek"],
+    "Score": [30, 49, np.NaN, np.NaN],
+
+})
+print('Is NaN in Score: ', any(df1['Score'].isna()))
+print('Is NaN in Name', any(df1['Name'].isna()))
+removed_nan = df1.dropna(thresh=1)  # tolerancja brakujacych wartosci
+print(removed_nan)
 
 # funckja apply
