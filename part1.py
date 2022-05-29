@@ -40,15 +40,22 @@ df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 # print(df1[df1['col1'] == df1["col1"].max()])
 
 # Dodawanie kolumn
-print(df1.shape)
+print('Initial shape', df1.shape)
 df1['new_col_constant'] = 1
 df1['new_col_values'] = [3, 4, 5, 6, 7, 8]
 df1['new_col_sum'] = df1['col1'] + 1
-print(df1.shape)
-print(df1)
+print('Added 3 columns', df1.shape)
 
 # Usuwanie kolumn
+# del df1['new_col_sum']  # usuwanie kolumn
 
+df1 = df1.drop(['Aa', 'Bb'], axis=0)  # usuwanie wierszy
+# df1 = df1.drop(['col1'], axis=1)  # usuwanie kolumn
+df1 = df1.drop(columns=['col1'])  # usuwanie kolumn
+df1 = df1.drop(index=['Cc'])  # usuwanie index
+print('Removed column', df1.shape)
+
+print(df1)
 
 # Filtrowanie danych
 
