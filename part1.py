@@ -123,22 +123,42 @@ s1 = pd.Series(data=list_values, index=['A', 'B', 'C'], dtype=int)
 
 # Łączenie DataFrames
 
+# df1 = pd.DataFrame({
+#     "Id": ['X01', 'X02', 'X03', 'X04'],
+#     "Name": ["Ania", "Ola", "Adam", "Tomek"],
+#     "Score": [30, 49, 13, 41]
+# })
+#
+# df2 = pd.DataFrame(
+#     {
+#         "id_student": ['X01', 'X02', 'X06'],
+#         "City": ['Wroclaw', 'Gdansk', "Katowice"],
+#     }
+# )
+# merged_data = df1.merge(right=df2, how='left', left_on="Id", right_on="id_student")
+# merged_data_2 = df2.merge(right=df1, how='right', left_on="id_student", right_on="Id")
+# print(merged_data)
+# print(merged_data_2)
+
 df1 = pd.DataFrame({
     "Id": ['X01', 'X02', 'X03', 'X04'],
     "Name": ["Ania", "Ola", "Adam", "Tomek"],
     "Score": [30, 49, 13, 41]
 })
 
-df2 = pd.DataFrame(
-    {
-        "id_student": ['X01', 'X02', 'X06'],
-        "City": ['Wroclaw', 'Gdansk', "Katowice"],
-    }
-)
-merged_data = df1.merge(right=df2, how='left', left_on="Id", right_on="id_student")
-merged_data_2 = df2.merge(right=df1, how='right', left_on="id_student", right_on="Id")
-print(merged_data)
-print(merged_data_2)
+df2 = pd.DataFrame({
+    "Id": ['X05', 'X06', 'X07', 'X08'],
+    "Name": ["Ala", "Jagoda", "Adrian", "Damian"],
+    "Score": [40, 59, 13, 41]
+})
+
+# append_dfs = df1.append(df2)
+# append_dfs.reset_index(inplace=True)  # nie tworzy nowego obiektu tylko nadpisuje istniejacy
+# print(append_dfs)
+
+concat_data_rows = pd.concat([df1, df2], axis=0)
+concat_data_columns = pd.concat([df1, df2], axis=1)
+print(concat_data_columns)
 
 # Grupowanie
 
