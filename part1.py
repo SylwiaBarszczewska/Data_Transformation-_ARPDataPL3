@@ -180,6 +180,7 @@ df1 = pd.DataFrame({
 # Sortowanie
 # sorted_data = df1.sort_values(by='Name') # domyslnie sortowanie od najmniejszej do najwiekszej
 # sorted_data_2 = df1.sort_values(by='Score', ascending=False)  # sortowanie od najwiekszej do najmniejszej
+# sorted_data_3 = df1.sort_values(by=['Score', 'Name'], ascending=False)  # sortowanie pierwsze do Score, pozniej po Name
 # print(sorted_data_2)
 
 # Brakujące wartości
@@ -202,5 +203,5 @@ df1 = pd.DataFrame({
 
 max_score = df1['Score'].max()
 df1['Score %'] = df1['Score'].apply(lambda x: (x / max_score) * 100)
-
+df1['First char'] = df1['Name'].apply(lambda x: x)
 print(df1)
