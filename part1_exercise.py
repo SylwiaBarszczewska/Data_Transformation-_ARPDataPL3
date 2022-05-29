@@ -1,8 +1,15 @@
+import pandas as pd
 """
 Zadanie 1:
 Stwórz dataframe z dzięsięcioma imionami uczniów i uczennic oraz liczbą punktów, jakie uzyskali z egzaminu.
 Następnie sprawdź, jaka była średnia i mediana wyników.
 """
+df1 = pd.DataFrame({
+    "Name": ["Ania", "Ola", "Adam", "Tomek"],
+    "Score": [30, 49, 13, 41]
+})
+
+print(f'Mean score: {df1["Score"].mean()}, median of score: {df1["Score"].median()}')
 
 """
 Zadanie 2: 
@@ -33,7 +40,7 @@ Zadanie 5:
 Połącz ze sobą dwie poniższe ramki.
 student_data1 = pd.DataFrame({
 'student_id': ['S1', 'S2', 'S3', 'S4', 'S5'],
-'name': ['Danniella Fenton', 'Ryder Storey', 'Bryce Jensen', 'Ed Bernal', 'Kwame Morin'] })
+'name': ['Daniela Fenton', 'Ryder Storey', 'Bryce Jensen', 'Ed Bernal', 'Kwame Morin'] })
 student_data2 = pd.DataFrame({
 'student_id': ['S6', 'S7', 'S8', 'S9', 'S10'],
 'name': ['Scarlette Fisher', 'Carla Williamson', 'Dante Morse', 'Kaiser William', 'Madeeha Preston'] })
