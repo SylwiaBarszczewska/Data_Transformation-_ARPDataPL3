@@ -73,55 +73,72 @@ s1 = pd.Series(data=list_values, index=['A', 'B', 'C'], dtype=int)
 # print(filtered_column)
 
 # Operacje na Series i DataFrames
-df_1 = pd.DataFrame(
-    {
-        "A": [1, 2, 3],
-        "B": [1.1, 2.2, 3.3]
-    }
-)
-df_2 = pd.DataFrame(
-    {
-        "A": [4, 5, 6],
-        "B": [4.1, 5.2, 6.3]
-    }
-)
-print(df_1 + df_2)
+# df_1 = pd.DataFrame(
+#     {
+#         "A": [1, 2, 3],
+#         "B": [1.1, 2.2, 3.3]
+#     }
+# )
+# df_2 = pd.DataFrame(
+#     {
+#         "A": [4, 5, 6],
+#         "B": [4.1, 5.2, 6.3]
+#     }
+# )
+# print(df_1 + df_2)
+#
+# df_1 = pd.DataFrame(
+#     {
+#         "A": [1, 2, 3, 4],
+#         "B": [1.1, 2.2, 3.3, 4.4]
+#     }
+# )
+# df_2 = pd.DataFrame(
+#     {
+#         "A": [4, 5, 6],
+#         "B": [4.1, 5.2, 6.3]
+#     }
+# )
+# print(df_1 + df_2)
+#
+# df_1 = pd.DataFrame(
+#     {
+#         "A": [1, 2, 3, 4],
+#         "B": [1.1, 2.2, 3.3, 4.4]
+#     }
+# )
+# df_2 = pd.DataFrame(
+#     {
+#         "A": [4, 5, 6],
+#         "C": [4.1, 5.2, 6.3]
+#     }
+# )
+# df_1['C'] = 0
+# df_2['B'] = 0
+#
+# print(df_1)
+# print(df_1 - df_2)
 
-df_1 = pd.DataFrame(
-    {
-        "A": [1, 2, 3, 4],
-        "B": [1.1, 2.2, 3.3, 4.4]
-    }
-)
-df_2 = pd.DataFrame(
-    {
-        "A": [4, 5, 6],
-        "B": [4.1, 5.2, 6.3]
-    }
-)
-print(df_1 + df_2)
-
-df_1 = pd.DataFrame(
-    {
-        "A": [1, 2, 3, 4],
-        "B": [1.1, 2.2, 3.3, 4.4]
-    }
-)
-df_2 = pd.DataFrame(
-    {
-        "A": [4, 5, 6],
-        "C": [4.1, 5.2, 6.3]
-    }
-)
-df_1['C'] = 0
-df_2['B'] = 0
-
-print(df_1)
-print(df_1 - df_2)
-
-print(df_1 + 5) # skalarna wartosc
+# print(df_1 + 5)  # skalarna wartosc
 
 # Łączenie DataFrames
+
+df1 = pd.DataFrame({
+    "Id": ['X01', 'X02', 'X03', 'X04'],
+    "Name": ["Ania", "Ola", "Adam", "Tomek"],
+    "Score": [30, 49, 13, 41]
+})
+
+df2 = pd.DataFrame(
+    {
+        "id_student": ['X01', 'X02', 'X06'],
+        "City": ['Wroclaw', 'Gdansk', "Katowice"],
+    }
+)
+merged_data = df1.merge(right=df2, how='left', left_on="Id", right_on="id_student")
+merged_data_2 = df2.merge(right=df1, how='right', left_on="id_student", right_on="Id")
+print(merged_data)
+print(merged_data_2)
 
 # Grupowanie
 
