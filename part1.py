@@ -37,6 +37,7 @@ df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 
 # operacje matematyczne
 print(f'Min value: {df1["col1"].min()}, Max value: {df1["col1"].max()}, Mean value: {df1["col1"].mean()}')
+print(df1[df1['col1'] == df1["col1"].max()])
 
 # Dodawanie kolumn
 
