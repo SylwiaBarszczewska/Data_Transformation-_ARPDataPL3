@@ -25,17 +25,18 @@ df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 # print(df1.columns)
 # print(df1.index)
 
-sample_data_iloc = df1.iloc[0]
-sample_data_loc = df1.loc['Aa']
-sample_data_iloc_first3 = df1.iloc[:3, :-1]
-sample_data_loc_one_col = df1.loc['Aa', ['col1', 'col2']]
-
-first_col_series = df1['col1']
-first_col_df = df1[['col1', 'col2']]
-print(first_col_df)
+# sample_data_iloc = df1.iloc[0]
+# sample_data_loc = df1.loc['Aa']
+# sample_data_iloc_first3 = df1.iloc[:3, :-1]
+# sample_data_loc_one_col = df1.loc['Aa', ['col1', 'col2']]
+#
+# first_col_series = df1['col1']
+# first_col_df = df1[['col1', 'col2']]
+# print(first_col_df)
 # print(type(first_col_df))
 
 # operacje matematyczne
+print(f'Min value: {df1["col1"].min()}, Max value: {df1["col1"].max()}, Mean value: {df1["col1"].mean()}')
 
 # Dodawanie kolumn
 
