@@ -16,13 +16,14 @@ data1 = {
 }
 
 numpy_data = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
-columns = ['col1', 'col2', 'col3']
 df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc'])
-df2 = pd.DataFrame(data=numpy_data, index=['Aa', 'Bb', 'Cc'], columns=columns)
-print(df2)
-
+df2 = pd.DataFrame(data=numpy_data, index=['Aa', 'Bb', 'Cc'], columns=['col1', 'col2', 'col3'])
+print(df1)
 
 # Wyswietlanie danych
+print(df1.shape) # zwraca wymiar tabeli
+
+#operacje matematyczne
 
 # Dodawanie kolumn
 
