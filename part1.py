@@ -58,8 +58,17 @@ df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 
 # Filtrowanie danych
 print(df1)
-sample_data = df1[(df1['col1'] <= 4) & (df1['col2'] != 'Unknown')]
-print(sample_data)
+# sample_data = df1[(df1['col1'] <= 4) & (df1['col2'] != 'Unknown')]
+# less_than_4 = df1['col1'] < 4
+# print(df1[less_than_4])
+# print(sample_data)
+# print(df1)
+
+df1['new index'] = range(len(df1))
+print(df1)
+
+# filtered_column =
+
 
 # Operacje na Series i DataFrames
 
@@ -70,3 +79,5 @@ print(sample_data)
 # Sortowanie
 
 # Brakujące wartości
+
+# funckja apply
