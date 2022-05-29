@@ -9,14 +9,14 @@ s1 = pd.Series(data=list_values, index=['A', 'B', 'C'], dtype=int)
 # print(s1)
 
 # Tworzenie DataFrame
-data1 = {
-    "col1": [1, 2, 3, 4, 5, 6],
-    "col2": ['A', 'B', 'C', 'Unknown', 'D', 'E'],
-    "col3": [1.1, 2.2, 3.3, 0, 1, 2]
-}
+# data1 = {
+#     "col1": [1, 2, 3, 4, 5, 6],
+#     "col2": ['A', 'B', 'C', 'Unknown', 'D', 'E'],
+#     "col3": [1.1, 2.2, 3.3, 0, 1, 2]
+# }
 
 # numpy_data = np.array([[1, 2, 3], [1, 2, 3], [1, 2, 3]])
-df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
+# df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 # df2 = pd.DataFrame(data=numpy_data, index=['Aa', 'Bb', 'Cc'], columns=['col1', 'col2', 'col3'])
 # print(df1)
 
@@ -57,20 +57,36 @@ df1 = pd.DataFrame(data=data1, index=['Aa', 'Bb', 'Cc', 'Dd', 'Ee', 'Ff'])
 # print(df1)
 
 # Filtrowanie danych
-print(df1)
+# print(df1)
 # sample_data = df1[(df1['col1'] <= 4) & (df1['col2'] != 'Unknown')]
 # less_than_4 = df1['col1'] < 4
 # print(df1[less_than_4])
 # print(sample_data)
 # print(df1)
 
-df1['new index'] = range(len(df1))
-print(df1)
-
-# filtered_column =
-
+# df1['new index'] = range(len(df1))
+# print(df1.index)
+# df1 = df1.reset_index()
+#
+# sample_data = df1[df1['col1'] <= 4]
+# filtered_column = df1['col1'][df1['col1'] <= 4]
+# print(filtered_column)
 
 # Operacje na Series i DataFrames
+df_1 = pd.DataFrame(
+    {
+        "A": [1, 2, 3],
+        "B": [1.1, 2.2, 3.3]
+    }
+)
+
+
+df_2 = pd.DataFrame(
+    {
+        "A": [4, 5, 6],
+        "B": [4.1, 5.2, 6.3]
+    }
+)
 
 # Łączenie DataFrames
 
